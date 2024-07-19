@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Development Roadmap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .time {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Front-End Development Roadmap</h1>
+        <h3>HTML CSS JS GIT FRAMWORKS BUILD TESTING  PERFORMANCE PROGRESSIVE DEPLOUMENT     </h1>
+        <h1 style="color: blue;text-align: center;">HCJ GFBT PPD    </h1>
+
+
+
+        <h2>1. Basics</h2>
+        <h3>HTML</h3>
+        <p>Arabic: تعلم أساسيات HTML مثل العناصر، السمات، وعلامات الرأس والهيكلية.</p>
+        <p>English: Learn the basics of HTML like elements, attributes, and head and structural tags.</p>
+
+        <h3>CSS</h3>
+        <p>Arabic: تعلم كيفية تصميم الصفحات باستخدام CSS، بما في ذلك التنسيقات، الشبكات، وتصميم الاستجابة.</p>
+        <p>English: Learn how to style pages using CSS, including layouts, grids, and responsive design.</p>
+
+        <h3>JavaScript</h3>
+        <p>Arabic: تعلم أساسيات JavaScript، التحكم في التدفق، التلاعب بـ DOM، والأحداث.</p>
+        <p>English: Learn the basics of JavaScript, control flow, DOM manipulation, and events.</p>
+
+        <h2>2. Advanced Topics</h2>
+        <h3>Version Control (Git)</h3>
+        <p>Arabic: فهم كيفية استخدام Git و GitHub لإدارة التعليمات البرمجية والإصدارات.</p>
+        <p>English: Understand how to use Git and GitHub for code management and version control.</p>
+
+        <h3>Advanced JavaScript</h3>
+        <p>Arabic: تعلم مواضيع متقدمة في JavaScript مثل ES6، الوعود، و async/await.</p>
+        <p>English: Learn advanced JavaScript topics like ES6, promises, and async/await.</p>
+
+        <h2>3. Frameworks and Libraries</h2>
+        <h3>CSS Frameworks</h3>
+        <p>Arabic: تعلم استخدام أطر العمل مثل Bootstrap أو Tailwind CSS.</p>
+        <p>English: Learn to use frameworks like Bootstrap or Tailwind CSS.</p>
+
+        <h3>JavaScript Libraries/Frameworks</h3>
+        <p>Arabic: تعلم إطار العمل مثل React، Vue، أو Angular.</p>
+        <p>English: Learn a framework like React, Vue, or Angular.</p>
+
+        <h2>4. Tools and Build Systems</h2>
+        <h3>Package Managers</h3>
+        <p>Arabic: تعلم كيفية استخدام NPM أو Yarn لإدارة الحزم.</p>
+        <p>English: Learn how to use NPM or Yarn for package management.</p>
+
+        <h3>Build Tools</h3>
+        <p>Arabic: تعلم استخدام أدوات البناء مثل Webpack، Gulp، أو Parcel.</p>
+        <p>English: Learn to use build tools like Webpack, Gulp, or Parcel.</p>
+
+        <h2>5. Testing and Debugging</h2>
+        <h3>Testing</h3>
+        <p>Arabic: تعلم كيفية كتابة اختبارات باستخدام Jest أو Mocha.</p>
+        <p>English: Learn how to write tests using Jest or Mocha.</p>
+
+        <h3>Debugging</h3>
+        <p>Arabic: فهم كيفية تصحيح الأخطاء باستخدام أدوات المتصفح مثل Chrome DevTools.</p>
+        <p>English: Understand how to debug using browser tools like Chrome DevTools.</p>
+
+        <h2>6. Performance Optimization</h2>
+        <h3>Performance</h3>
+        <p>Arabic: تعلم تقنيات لتحسين أداء التطبيقات الأمامية.</p>
+        <p>English: Learn techniques for optimizing the performance of front-end applications.</p>
+
+        <h2>7. Progressive Web Apps (PWA)</h2>
+        <h3>PWA</h3>
+        <p>Arabic: تعلم كيفية بناء تطبيقات ويب تقدمية.</p>
+        <p>English: Learn how to build Progressive Web Apps.</p>
+
+        <h2>8. Deployment</h2>
+        <h3>Deployment</h3>
+        <p>Arabic: تعلم كيفية نشر التطبيقات على الويب باستخدام خدمات مثل Vercel أو Netlify.</p>
+        <p>English: Learn how to deploy applications to the web using services like Vercel or Netlify.</p>
+
+        <button onclick="copyToClipboard()">Copy</button>
+        <button onclick="window.print()">Print</button>
+
+        <div class="time" id="currentTime"></div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const text = document.querySelector('.container').innerText;
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('Content copied to clipboard');
+        }
+
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('currentTime').innerText = 'Current Time: ' + timeString;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
